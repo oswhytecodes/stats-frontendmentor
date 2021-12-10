@@ -45,7 +45,11 @@ p {
     flex-wrap: wrap;
   }
 }
-
+@media screen and (min-width: 1000px) {
+    .container {
+      max-width: 860px;
+    }
+  }
 
 /* CONTAINER TEXT */
 
