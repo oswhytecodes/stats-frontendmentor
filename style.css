@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'Source Sans Pro';
+    font-size: 15px;
+}
+h2 {
+    color: hsl(0, 0%, 100%);
+}
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+/*  CONTAINTER */
+
+.container {
+    margin: 10em auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 80%;
+    border-radius: 10px;
+    background-color: hsl(244, 38%, 16%);
+    overflow: hidden;
+}
+/* CONTAINER MEDIA QUERIES */
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    margin: 5em auto;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* CONTAINER TEXT */
+
+.container-text {
+    width: 50%;
+    max-width: 50ch;
+    margin: 2em 2em 3.5em 2em; 
+}
+@media screen and (max-width: 600px) {
+    .container-text {
+        max-width: fit-content;
+         text-align: center;
+         width: 85%;
+    }
+}
+.stats {
+    color: white;
+    text-transform: uppercase;
+}
+.purple-text {
+    color: hsl(277, 64%, 61%);
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+}
+/* GRID MEDIA QUERY*/
+
+@media screen and (max-width: 600px) {
+    .grid {
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: .1em;
+    }
+  }
+
+/* CONTAINER IMAGE */
+/* I  have to spend some time learning how to work with photos in css. after the breakpoint, the photo disappears. When I inspect the page, it has a height of 0. so the photo only shows up when I give it a pixel height */
+.container-image {
+    background-image: 
+    url('images/image-header-desktop.jpg');
+    width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width: 600px) {
+    .container-image {  
+    width: 400px;
+    height: 300px;
+    }
+  }
+
+/*FOOTER*/
+
+footer {
+    display: block;
+    background-color: aliceblue;
+    padding: 1em;
+}
+.attribution {
+    margin-top: 1em;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
